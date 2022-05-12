@@ -4,37 +4,51 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
 	<title>Slider</title>
 </head>
 <body>
 
 <div class="slider">
 	<div class="container">
-		<div class="contol-block">
-			<input checked type="radio" id="radio1" class="control">
-			<input type="radio" id="radio2" class="control">
-			<input type="radio" id="radio3" class="control">
-			<input type="radio" id="radio4" class="control">
-			<input type="radio" id="radio4" class="control">
-		</div>
+		<!-- <div class="conrtol-block"> -->
+			<input type="radio" id="radio1" name="radioButton" class="control" checked>
+			<input type="radio" id="radio2" name="radioButton" class="control">
+			<input type="radio" id="radio3" name="radioButton" class="control">
+			<input type="radio" id="radio4" name="radioButton" class="control">
+			<input type="radio" id="radio4" name="radioButton" class="control">
+			<input type="radio" id="radio5" name="radioButton" class="control">
+		
+		<!-- </div> -->
 			<div class="slider-window">
-				<img src="" alt="" class="slid1">
-				<img src="" alt="" class="slid1">
-				<img src="" alt="" class="slid1">
-				<img src="" alt="" class="slid1">
+				<div class="images-block">
+          <div class="slides slide1"></div>
+					<div class="slides slide2"></div>
+					<div class="slides slide3"></div>
+					<div class="slides slide4"></div>
+					<div class="slides slide5"></div>
+					<div class="slides slide6"></div>
+				</div>
 			</div>
 		<div class="label-block">
+			<div class="label-slider">
+				<label for="radio1">Minsk-Arena/2012/ Где-то здесь с права от Шиноды, Я</label>
+				<label for="radio2">Minsk-Arena/2012/ Офигенный был концерт!</label>
+				<label for="radio3">Minsk-Arena/2012/ Если честно я не верил что они кнам проиедут!</label>
+				<label for="radio4"></label>
+				<label for="radio5"></label>
+				<label for="radio6"></label>
+			</div>
+			
+		</div>
+		<!-- <div class="label-block-active">
 			<label for="radio1"></label>
 			<label for="radio2"></label>
 			<label for="radio3"></label>
 			<label for="radio4"></label>
-		</div>
-		<div class="label-block-active">
-			<label for="radio1"></label>
-			<label for="radio2"></label>
-			<label for="radio3"></label>
-			<label for="radio4"></label>
-		</div>
+			<label for="radio5"></label>
+			<label for="radio6"></label>
+		</div> -->
 	</div>
 </div>
 
