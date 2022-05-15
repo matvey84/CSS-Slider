@@ -11,7 +11,6 @@ body{
 	font-size: 16px;
 	font-weight: 400;
 	letter-spacing: 0.05em;
-	
 }
 .slider{
 	width: 100vw;
@@ -34,8 +33,8 @@ body{
 .slider-window{
 	position: relative;
   width: 95%;
-	height: 400px;
-	margin-top: 50px;
+	height: 460px;
+	margin-top: 25px;
 	border-radius: 10px;
 	overflow: hidden;
 }
@@ -54,18 +53,12 @@ body{
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-/* .slides{
-	min-width:800px;
-	width: 100%;
-	height: 100%;
-} */
 .slides img {
-	object-fit: cover;
+	object-fit: cover; 
 	min-width: 100%;
 	min-height: 100%;
-	/* background-position: center;
-	background-repeat: no-repeat; */
-	/* background-size: cover; */
+	background-position: center;
+	background-repeat: no-repeat; 
 }
 .images-block{
 	position: absolute;
@@ -76,25 +69,23 @@ body{
 	align-items: center;
 	width: auto;
 	height: 100%;
-	margin-right: 100%;
 }
-.conrtol-block{
+input[type=radio]{
+	position: relative;
+	width: 30px;
+	height: 30px;
 	order: 2;
-	margin-right: 0;
-	margin-left: 90px;
+  z-index: 100;
+	opacity: 0;
+	border-radius: 1px;
 }
-.control{
-	width: 20px;
-	height: 20px;
-	order: 2;
-	margin-right: 5px;
-}
+
 .label-block{
 	position: relative;
 	width:800px;
   height: 25px;
 	order: 1;
-	margin: 20px 17px 20px 17px;
+	margin: 10px 17px 10px 17px;
 	overflow: hidden;
 }
 .label-slider{
@@ -108,12 +99,6 @@ body{
 	justify-content: flex-start;
 	align-items: center;
 }
-/* .label-block-active{
-	display: none;
-	width: 100px;
-  height: 50px;
-	order: 1;
-} */
 .label-block label{
 	display: inline-block;
 	width: auto;
@@ -121,35 +106,97 @@ body{
 	line-height: 25px;
   color: rgb(200, 252, 247);
 	margin: 0 auto 5px auto;
-	/* background-color: aquamarine; */
-}
-
-input {
-	cursor: pointer;
 }
 
 #radio1:checked ~ .label-block .label-slider{
 	top: 0;
+	transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
 #radio2:checked ~ .label-block .label-slider{
 	top: -30px;
+  transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
 #radio3:checked ~ .label-block .label-slider{
 	top: -60px;
+  transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
 #radio4:checked ~ .label-block .label-slider{
 	top: -90px;
+  transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
 #radio5:checked ~ .label-block .label-slider{
 	top: -120px;
+  transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
 #radio6:checked ~ .label-block .label-slider{
 	top: -150px;
+  transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-/*сдвиг слфайдера*/
-#radio1:checked ~ .slider-window .images-block{left: 0;}
-#radio2:checked ~ .slider-window .images-block{left: -760px;}
-#radio3:checked ~ .slider-window .images-block{left: -1520px;}
-#radio4:checked ~ .slider-window .images-block{left: -2280px;}
-#radio5:checked ~ .slider-window .images-block{	left: -3040px;}
-#radio6:checked ~ .slider-window .images-block{	left: -3800px;}
+
+/*сдвиг слайдера*/
+
+#radio1:checked ~ .slider-window .images-block{
+	left: 0;
+	transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#radio2:checked ~ .slider-window .images-block{
+	left: -760px;
+	transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#radio3:checked ~ .slider-window .images-block{
+	left: -1520px;
+	transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#radio4:checked ~ .slider-window .images-block{
+	left: -2280px;
+	transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#radio5:checked ~ .slider-window .images-block{
+		left: -3040px;
+		transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#radio6:checked ~ .slider-window .images-block{
+		left: -3800px;
+		transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.label-block-active{
+	display: flex;
+	position: relative;
+	margin-left: -180px;
+	order: 4;
+}
+.label-block-active div{
+	position: relative;
+  border-radius: 50%;
+	width: 22px;
+	height: 22px;
+	background: rgb(13, 245, 137);
+	margin-right: 4px;
+  margin-left: 4px;  
+}
+/*смена стилей input[type=radio]*/
+#radio1:hover ~ .label-block-active > div:nth-child(1),
+#radio2:hover ~ .label-block-active > div:nth-child(2),
+#radio3:hover ~ .label-block-active > div:nth-child(3),
+#radio4:hover ~ .label-block-active > div:nth-child(4),
+#radio5:hover ~ .label-block-active > div:nth-child(5),
+#radio6:hover ~ .label-block-active > div:nth-child(6){
+  background: rgb(127, 255, 195);
+	transform: scale(0.95);
+	box-shadow: 0px 0px 17px 3px rgb(13, 245, 137);
+}
+#radio1:checked ~ .label-block-active > div:nth-child(1),
+#radio2:checked ~ .label-block-active > div:nth-child(2),
+#radio3:checked ~ .label-block-active > div:nth-child(3),
+#radio4:checked ~ .label-block-active > div:nth-child(4),
+#radio5:checked ~ .label-block-active > div:nth-child(5),
+#radio6:checked ~ .label-block-active > div:nth-child(6){
+  background: rgb(2, 82, 44);
+	transform: scale(0.7);
+	box-shadow: 0px 0px 17px 3px rgb(13, 245, 137) inset;
+}
