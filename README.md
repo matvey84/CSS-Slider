@@ -1,2 +1,2 @@
 # CSS-Slider
-https://matvey84.github.io/cssMemSlider/cssMemSlider/
+https://matvey84.github.io/cssMemSlider/cssMemSlider/index.html
