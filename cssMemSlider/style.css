@@ -11,28 +11,30 @@ body{
 	font-size: 16px;
 	font-weight: 400;
 	letter-spacing: 0.05em;
+	
 }
 .slider{
-	width: 100vw;
+  width: 100vw;
 	height: 100vh;
-	background-image: url(./assets/linkin-park-violet-logo-4k-music-stars-violet-brickwall-linkin-park-logo.jpg);
-  background-repeat: repeat;
+	background: url(./assets/341785.jpg);
+  background-repeat: norepeat;
 	background-position: center;
 	background-size: cover;
+	margin:auto;
 }
 .container{
 	display: flex;
 	justify-content:center;
 	align-items: center;
 	flex-wrap: wrap;
-	min-width: 770px;
-	width: 800px;
+	min-width: 760px;
+	width: 760px;
 	height: 100%;
 	margin: 0 auto;
 }
 .slider-window{
 	position: relative;
-  width: 95%;
+  width: 100%;
 	height: 460px;
 	margin-top: 25px;
 	border-radius: 10px;
@@ -51,14 +53,11 @@ body{
 	height: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover; 
 }
 .slides img {
-	object-fit: cover; 
 	min-width: 100%;
 	min-height: 100%;
-	background-position: center;
-	background-repeat: no-repeat; 
 }
 .images-block{
 	position: absolute;
@@ -78,6 +77,7 @@ input[type=radio]{
   z-index: 100;
 	opacity: 0;
 	border-radius: 1px;
+	cursor: pointer;
 }
 
 .label-block{
@@ -157,12 +157,12 @@ input[type=radio]{
 	transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 #radio5:checked ~ .slider-window .images-block{
-		left: -3040px;
-		transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	left: -3040px;
+	transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 #radio6:checked ~ .slider-window .images-block{
-		left: -3800px;
-		transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+	left: -3800px;
+	transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .label-block-active{
 	display: flex;
@@ -190,6 +190,7 @@ input[type=radio]{
 	transform: scale(0.95);
 	box-shadow: 0px 0px 17px 3px rgb(13, 245, 137);
 }
+
 #radio1:checked ~ .label-block-active > div:nth-child(1),
 #radio2:checked ~ .label-block-active > div:nth-child(2),
 #radio3:checked ~ .label-block-active > div:nth-child(3),
@@ -199,4 +200,96 @@ input[type=radio]{
   background: rgb(2, 82, 44);
 	transform: scale(0.7);
 	box-shadow: 0px 0px 17px 3px rgb(13, 245, 137) inset;
+}
+
+/*-----------------------mobile version*/
+@media (max-width:720px){
+	.container{
+		min-width: 700px; 
+		width: 700px;
+		overflow:hidden;
+	}
+	.slides{
+		width: 700px;
+	}
+	.slider{
+		height: 100vh;
+	}
+	.slider-window{
+		height: 450px;
+	}
+	
+	#radio1:checked ~ .slider-window .images-block{
+		left: 0;
+		transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+	#radio2:checked ~ .slider-window .images-block{
+		left: -700px;
+		transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+	#radio3:checked ~ .slider-window .images-block{
+		left: -1400px;
+		transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+	#radio4:checked ~ .slider-window .images-block{
+		left: -2100px;
+		transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+	#radio5:checked ~ .slider-window .images-block{
+			left: -2800px;
+			transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+	#radio6:checked ~ .slider-window .images-block{
+			left: -3500px;
+			transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+	.label-block{
+		position: absolute;
+		display: block;
+		left: 0;
+		top: 700px;
+		height: 55px;
+		overflow:hidden;
+		background-color: black;
+	}
+	.label-slider{
+		height: 60px;
+	}
+	.label-block label{
+		font-size: 28px;
+		height: 65px;
+		margin-left: 0;
+	}
+	.label-block label:nth-child(1){
+		margin-top: 3px;
+		margin-bottom: 3px;
+		margin-right: 70px;
+	}
+	.label-block label:nth-child(2){
+		margin-top: 12px;
+		margin-bottom: 17px;
+	}
+	.label-block label:nth-child(3){
+		margin-top: -5px;
+		margin-bottom: 3px;
+		margin-right: 70px;
+	}
+	.label-block label:nth-child(4),
+	.label-block label:nth-child(5){
+		margin-top: 11px;
+		margin-bottom:13px;
+	}
+	.label-block label:nth-child(6){
+		margin-top: 0px;
+		margin-bottom: 3px;
+		margin-right: 70px;
+	}
+
+	#radio1:checked ~ .label-block .label-slider{top: 0;}
+	#radio2:checked ~ .label-block .label-slider{top: -55px;}
+	#radio3:checked ~ .label-block .label-slider{top: -100px;}
+	#radio4:checked ~ .label-block .label-slider{top: -150px;}
+	#radio5:checked ~ .label-block .label-slider{top: -200px;}
+	#radio6:checked ~ .label-block .label-slider{top: -250px;}
+
 }
