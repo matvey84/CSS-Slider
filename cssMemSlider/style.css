@@ -6,6 +6,9 @@
 	box-sizing: border-box;
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+html{
+	font-size: 10px;
+}
 body{
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
@@ -27,17 +30,17 @@ body{
 	justify-content:center;
 	align-items: center;
 	flex-wrap: wrap;
-	min-width: 760px;
-	width: 760px;
+	min-width: 76rem;
+	width: 76rem;
 	height: 100%;
 	margin: 0 auto;
 }
 .slider-window{
 	position: relative;
   width: 100%;
-	height: 460px;
-	margin-top: 25px;
-	border-radius: 10px;
+	height: 46rem;
+	margin-top: 2.5rem;
+	border-radius: 1rem;
 	overflow: hidden;
 }
 .slide1{background-image: url(./assets/Minsk.jpg);}
@@ -49,7 +52,7 @@ body{
 
 .slide1,.slide2,.slide3,
 .slide4,.slide5,.slide6{
-	width: 760px;
+	width: 76rem;
 	height: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -71,21 +74,21 @@ body{
 }
 input[type=radio]{
 	position: relative;
-	width: 30px;
-	height: 30px;
+	width: 3rem;
+	height: 3rem;
 	order: 2;
   z-index: 100;
 	opacity: 0;
-	border-radius: 1px;
+	border-radius: .1rem;
 	cursor: pointer;
 }
 
 .label-block{
 	position: relative;
-	width:800px;
-  height: 25px;
+	width:80rem;
+  height: 2.5rem;
 	order: 1;
-	margin: 10px 17px 10px 17px;
+	margin: 1rem 1.7rem 1rem 1.7rem;
 	overflow: hidden;
 }
 .label-slider{
@@ -93,7 +96,7 @@ input[type=radio]{
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 25px;
+	height: 2.5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -102,10 +105,10 @@ input[type=radio]{
 .label-block label{
 	display: inline-block;
 	width: auto;
-	height: 25px;
+	height: 2.5rem;
 	line-height: 25px;
   color: rgb(200, 252, 247);
-	margin: 0 auto 5px auto;
+	margin: 0 auto .5rem auto;
 }
 
 #radio1:checked ~ .label-block .label-slider{
@@ -114,27 +117,27 @@ input[type=radio]{
 }
 
 #radio2:checked ~ .label-block .label-slider{
-	top: -30px;
+	top: -3rem;
   transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #radio3:checked ~ .label-block .label-slider{
-	top: -60px;
+	top: -6rem;
   transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #radio4:checked ~ .label-block .label-slider{
-	top: -90px;
+	top: -9rem;
   transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #radio5:checked ~ .label-block .label-slider{
-	top: -120px;
+	top: -120rem;
   transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #radio6:checked ~ .label-block .label-slider{
-	top: -150px;
+	top: -15rem;
   transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -145,39 +148,39 @@ input[type=radio]{
 	transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 #radio2:checked ~ .slider-window .images-block{
-	left: -760px;
+	left: -76rem;
 	transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 #radio3:checked ~ .slider-window .images-block{
-	left: -1520px;
+	left: -152rem;
 	transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 #radio4:checked ~ .slider-window .images-block{
-	left: -2280px;
+	left: -228rem;
 	transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 #radio5:checked ~ .slider-window .images-block{
-	left: -3040px;
+	left: -304rem;
 	transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 #radio6:checked ~ .slider-window .images-block{
-	left: -3800px;
+	left: -380rem;
 	transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .label-block-active{
 	display: flex;
 	position: relative;
-	margin-left: -180px;
+	margin-left: -18rem;
 	order: 4;
 }
 .label-block-active div{
 	position: relative;
   border-radius: 50%;
-	width: 22px;
-	height: 22px;
+	width: 2.2rem;
+	height: 2.2rem;
 	background: rgb(13, 245, 137);
-	margin-right: 4px;
-  margin-left: 4px;  
+	margin-right: .4rem;
+  margin-left: .4rem;  
 }
 /*смена стилей input[type=radio]*/
 #radio1:hover ~ .label-block-active > div:nth-child(1),
@@ -188,7 +191,7 @@ input[type=radio]{
 #radio6:hover ~ .label-block-active > div:nth-child(6){
   background: rgb(127, 255, 195);
 	transform: scale(0.95);
-	box-shadow: 0px 0px 17px 3px rgb(13, 245, 137);
+	box-shadow: 0rem 0rem 1.7rem .3rem rgb(13, 245, 137);
 }
 
 #radio1:checked ~ .label-block-active > div:nth-child(1),
@@ -199,7 +202,7 @@ input[type=radio]{
 #radio6:checked ~ .label-block-active > div:nth-child(6){
   background: rgb(2, 82, 44);
 	transform: scale(0.7);
-	box-shadow: 0px 0px 17px 3px rgb(13, 245, 137) inset;
+	box-shadow: 0rem 0rem 1.7rem .3rem rgb(13, 245, 137) inset;
 }
 
 /*-----------------------mobile version*/
@@ -208,18 +211,18 @@ input[type=radio]{
 		overflow:hidden;
 	}
 	.container{
-		min-width: 700px; 
-		width: 700px;
+		min-width: 70rem; 
+		width: 70rem;
 		overflow:hidden;
 	}
 	.slides{
-		width: 700px;
+		width: 70rem;
 	}
 	.slider{
 		height: 100vh;
 	}
 	.slider-window{
-		height: 450px;
+		height: 45rem;
 	}
 	
 	#radio1:checked ~ .slider-window .images-block{
@@ -227,23 +230,23 @@ input[type=radio]{
 		transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 	}
 	#radio2:checked ~ .slider-window .images-block{
-		left: -700px;
+		left: -70rem;
 		transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	}
 	#radio3:checked ~ .slider-window .images-block{
-		left: -1400px;
+		left: -140rem;
 		transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	}
 	#radio4:checked ~ .slider-window .images-block{
-		left: -2100px;
+		left: -210rem;
 		transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	}
 	#radio5:checked ~ .slider-window .images-block{
-			left: -2800px;
+			left: -280rem;
 			transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	}
 	#radio6:checked ~ .slider-window .images-block{
-			left: -3500px;
+			left: -350rem;
 			transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 	}
 	.label-block{
@@ -251,64 +254,64 @@ input[type=radio]{
 		position: absolute;
 		display: block;
 		/* left: 0; */
-		top: 700px;
-		height: 50px;
+		top: 70rem;
+		height: 5rem;
 		overflow:hidden;
 		background-color: black;
-		padding-left: 10px;
+		padding-left: 1rem;
 	}
 	.label-slider{
 		width: 100%;
-		height: 65px;
+		height: 6.5rem;
 	}
 	.label-block label{
-		font-size: 28px;
-		height: 65px;
-		margin-left: 10px;
+		font-size: 2.8rem;
+		height: 6.5rem;
+		margin-left: 1rem;
 	}
 	.label-block label:nth-child(1){
-		margin-top: 1px;
-		margin-bottom: 3px;
-		margin-right: 70px;
+		margin-top: .1rem;
+		margin-bottom: .3rem;
+		margin-right: 7rem;
 	}
 	.label-block label:nth-child(2){
-		margin-top: 14px;
-		margin-bottom: 19px;
+		margin-top: 1.4rem;
+		margin-bottom: 2rem;
 	}
 	.label-block label:nth-child(3){
-		margin-top: -11px;
-		margin-bottom: 3px;
-		margin-right: 70px;
+		margin-top: -1.1rem;
+		margin-bottom: .3rem;
+		margin-right: 7rem;
 	}
 	.label-block label:nth-child(4),
 	.label-block label:nth-child(5){
-		margin-top: 9px;
-		margin-bottom:14px;
+		margin-top: .9rem;
+		margin-bottom:1.4rem;
 	}
 	.label-block label:nth-child(6){
-		margin-top: 0px;
-		margin-bottom: 3px;
-		margin-right: 70px;
+		margin-top: 0rem;
+		margin-bottom: .3rem;
+		margin-right: 7rem;
 	}
 
 	#radio1:checked ~ .label-block .label-slider{top: 0;}
-	#radio2:checked ~ .label-block .label-slider{top: -55px;}
-	#radio3:checked ~ .label-block .label-slider{top: -100px;}
-	#radio4:checked ~ .label-block .label-slider{top: -150px;}
-	#radio5:checked ~ .label-block .label-slider{top: -200px;}
-	#radio6:checked ~ .label-block .label-slider{top: -250px;}
+	#radio2:checked ~ .label-block .label-slider{top: -5.5rem;}
+	#radio3:checked ~ .label-block .label-slider{top: -10rem;}
+	#radio4:checked ~ .label-block .label-slider{top: -15rem;}
+	#radio5:checked ~ .label-block .label-slider{top: -20rem;}
+	#radio6:checked ~ .label-block .label-slider{top: -25rem;}
 
 	.label-block-active{
-		width: 400px;
-		margin-left: -357px;
+		width: 40rem;
+		margin-left: -35.7rem;
 	}
 	.label-block-active div {
-    margin-right: 11px;
-    margin-left: 4px;
+    margin-right: 1.1rem;
+    margin-left: .4rem;
 }
 	input[type=radio]{
-		width: 60px;
-		height: 60px;
+		width: 6rem;
+		height: 6rem;
 	}
 	.label-block-active > div:nth-child(1),
 	.label-block-active > div:nth-child(2),
@@ -316,8 +319,8 @@ input[type=radio]{
 	.label-block-active > div:nth-child(4),
 	.label-block-active > div:nth-child(5),
 	.label-block-active > div:nth-child(6){
-  width: 45px;
-	height: 45px;
+  width: 4.5rem;
+	height: 4.5rem;
   }
 
 
